@@ -18,29 +18,17 @@ const Modal = {
   }
 }
 
+const Storage = {
+  get() {
+    return JSON.parse(localStorage.getItem("dev.finance:transactions")) || []
+  },
+  set(transactions) {
+    localStorage.setItem("dev.finance:transactions", JSON.stringify(transactions))
+  }
+}
+
 const Transaction = {
-  all: [
-    {
-      description: 'Luz',
-      amount: -50000,           // escrever em centavos para ficar inteiro
-      date: '23/01/2021'
-    },
-    {
-      description: 'Criação de websites',
-      amount: 500000,           // escrever em centavos para ficar inteiro
-      date: '23/01/2021'
-    },
-    {
-      description: 'Internet',
-      amount: -20000,           // escrever em centavos para ficar inteiro
-      date: '23/01/2021'
-    },
-    {
-      description: 'App',
-      amount: 100000,           // escrever em centavos para ficar inteiro
-      date: '23/01/2021'
-    },
-  ],
+  all: Storage.get(),
 
   add(transaction) {
     Transaction.all.push(transaction)
@@ -227,6 +215,7 @@ const App = {
     
     DOM.updateBalance();
 
+    Storage.set(Transaction.all)
   },
 
   reload() {
