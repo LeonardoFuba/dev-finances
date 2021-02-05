@@ -179,3 +179,45 @@ te deixar por dentro de tudo.
 		[] Nem só de classes ou ID's
 	### Para acompanhar a próxima aula
 	* [] O guia estelar de JavaScript
+
+
+---
+
+## O que vamos ver hoje?
+
+__Javascript__
+
+[] Objetivos
+[] Tipos de estrutura de dados
+[] if/else
+[] Erros
+[] Funcionalidades
+[] Adicionar ou remover transações
+[] Calcular
+[] Salvar no lacalStorage
+
+## Lembretes
+* A aula vai ficar gravada
+* As outras estarão disponíveis
+* Essa é uma continuação da aula passada
+* Nosso time estará na comunidade para tirar dúvidas e 
+te deixar por dentro de tudo.
+
+## O que rolou até aqui
+
+* Soft Skills
+[] O que é ser uma pessoa programadora
+[] Oportunidades e mercado
+[] Organização e estudos
+	[] Foco, Local, Aprendizado ativo, Revisões, Pesquisas
+[] Navegamos pela plataforma
+[] Dicas de como acompanhar as aulas
+[] Mentalidade
+	[] Tempo, Descanso, Persistência, Síndrome do impostor
+	[] Você gosta do que está fazendo?
+* Hard Skills (prática)
+[] HTML e CSS pra deixar a aplicação completa
+[] Beliscadinha no JavaScript
+
+
+# Bora Codar!
