@@ -7,6 +7,7 @@ const Modal = {
       .classList
       .add('active')
   },
+
   close() {
     // fechar o modal
     // remover a classe active do modal
@@ -17,31 +18,29 @@ const Modal = {
   }
 }
 
-const transactions = [
-  {
-    description: 'Luz',
-    amount: -50000,           // escrever em centavos para ficar inteiro
-    date: '23/01/2021'
-  },
-  {
-    description: 'Criação de websites',
-    amount: 500000,           // escrever em centavos para ficar inteiro
-    date: '23/01/2021'
-  },
-  {
-    description: 'Internet',
-    amount: -20000,           // escrever em centavos para ficar inteiro
-    date: '23/01/2021'
-  },
-  {
-    description: 'App',
-    amount: 100000,           // escrever em centavos para ficar inteiro
-    date: '23/01/2021'
-  },
-]
-
 const Transaction = {
-  all: transactions,
+  all: [
+    {
+      description: 'Luz',
+      amount: -50000,           // escrever em centavos para ficar inteiro
+      date: '23/01/2021'
+    },
+    {
+      description: 'Criação de websites',
+      amount: 500000,           // escrever em centavos para ficar inteiro
+      date: '23/01/2021'
+    },
+    {
+      description: 'Internet',
+      amount: -20000,           // escrever em centavos para ficar inteiro
+      date: '23/01/2021'
+    },
+    {
+      description: 'App',
+      amount: 100000,           // escrever em centavos para ficar inteiro
+      date: '23/01/2021'
+    },
+  ],
 
   add(transaction) {
     Transaction.all.push(transaction)
@@ -66,6 +65,7 @@ const Transaction = {
 
     return income;
   },
+
   expenses() {
     // somar as saídas
     let expense = 0;
@@ -77,6 +77,7 @@ const Transaction = {
 
     return expense;
   },
+
   total() {
     // entradas - saidas
     return Transaction.incomes() + Transaction.expenses();
@@ -93,6 +94,7 @@ const DOM = {
     DOM.transactionsContainer.appendChild(tr)
 
   },
+
   innerHTMLTransaction(transaction) {
     const CSSclasse = transaction.amount > 0 ? "income" : "expense"
 
@@ -107,6 +109,7 @@ const DOM = {
     `
     return html
   },
+
   updateBalance() {
     document
       .getElementById('incomeDisplay')
@@ -118,6 +121,7 @@ const DOM = {
       .getElementById('totalDisplay')
       .innerHTML = Utils.formatCurrency(Transaction.total())
   },
+
   clearTransactions() {
     DOM.transactionsContainer.innerHTML = ""
   }
@@ -158,13 +162,3 @@ const App = {
 }
 
 App.init()
-
-
-// testes de memoria
-Transaction.add({
-  description: 'Alo',
-  amount: 200,           // escrever em centavos para ficar inteiro
-  date: '23/01/2021'
-})
-
-Transaction.remove(0)
