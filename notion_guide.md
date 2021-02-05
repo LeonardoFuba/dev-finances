@@ -221,3 +221,14 @@ te deixar por dentro de tudo.
 
 
 # Bora Codar!
+
+
+## Tarefa 04: Assistir aos cursos/aulas
+	### Revisão
+	* [] O guia estelar de JavaScript 
+  ### Revisão
+	*	[] O Guia estelar de Git
+	*	[] O Guia estelar de Github
+	*	[] Pilotando com a DOM
+	### Colocar o código final no Github
+  
